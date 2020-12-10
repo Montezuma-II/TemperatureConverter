@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TemperatureConverter</string>
+    <string name="temp_num"> Podaj temperature:</string>
+    <string name ="button"> Convert </string>
+    <string name ="convertedTemp"> Converted temperature </string>
+    <string-array name="scale">
+        <item>Celcjusz</item>
+        <item>Kelvin</item>
+        <item>Farenheit</item>
+    </string-array>
+</resources>
