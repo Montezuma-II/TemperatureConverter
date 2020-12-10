@@ -1,7 +1,8 @@
 package edu.ib;
 
 public class TemperatureConverter {
-
+    // Klasa ta zawiera metody przeliczające poszczególne temperatury
+    // jest wywowaływana w klasie MainActivity
     double celcjuszToKelvin(double tIn) {
         double tOut = tIn + 273.15;
         return tOut;

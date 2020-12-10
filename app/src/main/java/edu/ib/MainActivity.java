@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+    //  zaprogramowanie urzycia elementów aplikacji
     public void onClickBtn(View view) {
         EditText tempIn = (EditText) findViewById(R.id.tempInput);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         double tempInput = Double.valueOf(tempIn.getText().toString());
         double tempOut = 0;
         TemperatureConverter tc = new TemperatureConverter();
+
+        // Warunki służace do wyboru metody przeliczania temperatury
         if (scalaIn.equals("Celcjusz") && scalaOut.equals("Kelvin"))
             tempOut = tc.celcjuszToKelvin(tempInput);
         if (scalaIn.equals("Kelvin") && scalaOut.equals("Celcjusz"))
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             tempOut = tc.farenToKelv(tempInput);
         if (Double.isInfinite(tempInput) || Double.isNaN(tempInput))
             wynik.setText("Wprowadź temperature!");
-        else tempOut = tempInput;
+
         DecimalFormat format = new DecimalFormat("#.##");
         wynik.setText(String.valueOf(format.format(tempOut)));
     }
